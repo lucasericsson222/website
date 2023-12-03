@@ -9,10 +9,10 @@
         <h1>Blog</h1>
 
         <ul>
-            {#each data.posts as post}
+            {#each data.posts.entries() as [index, post]}
             <li>
 
-                <a class="title" href={post.path.replace("posts/", "").replace("\(sub\)/", "")}>
+                <a class={index == 0 ? "less-top-margin title" : "equal-top-margin title"} href={post.path.replace("posts/", "").replace("\(sub\)/", "")}>
                     <h2>
                             {post.meta.title}
                     </h2>
@@ -31,7 +31,9 @@
                 ).format(new Date(post.meta.date))}
                 </p>
             </li>
+            {#if index != data.posts.length - 1}
             <hr/>
+            {/if}
             {/each}
         </ul>
     </div>
@@ -45,9 +47,15 @@
         color: #17181C;
         margin: 0;
     }
-    p {
+    .less-top-margin {
         margin-top: 1rem;
-        margin-bottom: 1rem;
+    }
+    .equal-top-margin {
+        margin-top: 2rem;
+    }
+    p {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
     h2:hover {
         background-color: #F3A712;
@@ -83,8 +91,7 @@
         text-decoration: none;  
         // override default a styling
         color: #17181C;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
     a:hover {
         //override default a:hover styling (in lib)

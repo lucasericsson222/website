@@ -1,3 +1,3 @@
-
-
-<slot/>
+<main>
+    <slot/>
+</main>

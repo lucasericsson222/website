@@ -36,7 +36,10 @@
         align-self: flex-start;
         color: #17181C;
     }
-     
+    h2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
     .center-container {
         display: flex;
         flex-direction: column;

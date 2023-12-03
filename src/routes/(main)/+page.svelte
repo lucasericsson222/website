@@ -11,16 +11,6 @@
     <h2 class="post-text">a software developer and musician</h2>
 </div>
 
-<div class="content">
-    <div class="hbox-container">
-        <p> Hello! I'm a UC Berkeley student majoring in Electrical Engineering
-            and Computer Science. I enjoy making videogames, writing music, and
-            working on conlangs. 
-        </p>
-        <p></p>
-    </div>
-</div>
-
 <style lang="scss">
     h1 {
         color: #F3A712;
@@ -29,21 +19,6 @@
         text-shadow: -20px -20px #F05D5E;
         margin: 0;
         padding: 0;
-    }
-    .content {
-        padding: 1rem;
-        background: #17181C;
-        flex: 1;
-        //box-shadow: 0 0 100px 1px black;
-
-    //box-shadow: inset 0 0 100px 1px black;
-    }
-    .hbox-container {
-        display: flex;
-    }
-    .hbox-container * {
-        padding: 2rem;
-        flex: 1;
     }
     .center-container {
         margin: 2rem;
@@ -66,9 +41,6 @@
         background-color: #F05D5E;
         color: #17181C;
         padding: 0.25rem;
-    }
-    p {
-        margin: 0;
     }
     h1 {
         margin: 0;
