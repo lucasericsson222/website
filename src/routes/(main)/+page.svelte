@@ -6,9 +6,9 @@
 <GameOfLife />
 
 <div class="center-container"> 
-    <h2 class="sideways-pre-text">Hello! I'm</h2>
-    <h1>Lucas</h1>
-    <h2 class="post-text">a software developer and musician</h2>
+    <h2 class="sideways-pre-text">HELLO! I'M</h2>
+    <h1 class="name">Lucas</h1>
+    <h2 class="post-text">A SOFTWARE DEVELOPER AND MUSICIAN</h2>
 </div>
 
 <style lang="scss">

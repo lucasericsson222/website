@@ -7,7 +7,6 @@
 </script>
 
 <footer>
-    <hr/>
     <a href="https://github.com/lucasericsson222">
     <img 
         src={github_logo_png} 
@@ -35,6 +34,9 @@
 </footer>
 
 <style lang="scss">
+    footer {
+        padding: 1rem;
+    }
     hr {
         border-top: 1px solid #F05D5E;
         border-bottom: none;

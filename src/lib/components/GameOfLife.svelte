@@ -21,8 +21,8 @@
                 canvas.height = window.innerHeight;
                 ctx.fillStyle = dark_color;
 
-                row = Math.floor(ctx.canvas.width / number)
-                height = Math.floor(ctx.canvas.height / number) 
+                row = Math.ceil(ctx.canvas.width / number)
+                height = Math.ceil(ctx.canvas.height / number) 
                 
                 for(let i = 0; i < row; i++) {
                     world[i] = [];
@@ -78,8 +78,8 @@
         canvas.height = window.innerHeight;
 
         let new_world = copyWorld(world); 
-        row = Math.floor(ctx.canvas.width / number)
-        height = Math.floor(ctx.canvas.height / number) 
+        row = Math.ceil(ctx.canvas.width / number)
+        height = Math.ceil(ctx.canvas.height / number) 
         for(let i = 0; i < row; i++) {
             if (world[i] == null) {
                 world[i] = [];
