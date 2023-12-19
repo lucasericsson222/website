@@ -4,40 +4,34 @@
     export let data;
 </script>
 
-<div class="center-container">
-    <div class="content">
-        <h1>Blog</h1>
+<ul>
+    {#each data.posts.entries() as [index, post]}
+    <li>
 
-        <ul>
-            {#each data.posts.entries() as [index, post]}
-            <li>
-
-                <a class={index == 0 ? "less-top-margin title" : "equal-top-margin title"} href={post.path.replace("posts/", "").replace("\(sub\)/", "")}>
-                    <h2>
-                            {post.meta.title}
-                    </h2>
-                </a>
-                <p>
-                {(
-                    new Intl.DateTimeFormat(
-                        undefined, 
-                        { 
-                            weekday: "long", 
-                            year: 'numeric', 
-                            month: 'long', 
-                            day: 'numeric'
-                        }
-                    )
-                ).format(new Date(post.meta.date))}
-                </p>
-            </li>
-            {#if index != data.posts.length - 1}
-            <hr/>
-            {/if}
-            {/each}
-        </ul>
-    </div>
-</div>
+        <a class={index == 0 ? "less-top-margin title" : "equal-top-margin title"} href={post.path.replace("posts/", "").replace("\(sub\)/", "")}>
+            <h2>
+                    {post.meta.title}
+            </h2>
+        </a>
+        <p>
+        {(
+            new Intl.DateTimeFormat(
+                undefined, 
+                { 
+                    weekday: "long", 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric'
+                }
+            )
+        ).format(new Date(post.meta.date))}
+        </p>
+    </li>
+    {#if index != data.posts.length - 1}
+    <hr/>
+    {/if}
+    {/each}
+</ul>
 
 <style lang="scss">
     h2 {

@@ -5,9 +5,10 @@
 
 <div class="center-container">
     <article class="center-container">
-        <h1>{data.title}</h1>
         <div class="container">
-            <h2 class="date">{(
+
+            <h2 class="date">{data.title}</h2>
+            <h3>{(
                     new Intl.DateTimeFormat(
                         undefined, 
                         { 
@@ -18,18 +19,12 @@
                         }
                     )
                 ).format(new Date(data.date))}
-            </h2>
+            </h3>
             <svelte:component this={data.content} />
         </div>
     </article>
 </div>
 <style lang="scss">
-    h1 {
-        font-size: 5rem;
-        padding: 1rem;
-        margin: 1rem;
-        color: #F05D5E;
-    }
     .date {
         background-color: #F05D5E;
         padding: 0.25rem;
@@ -46,7 +41,6 @@
         align-items: center;
     }
     .container {
-
         width: min(100vw, 700px);
         display: flex;
         flex-direction: column;

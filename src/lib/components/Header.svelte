@@ -15,17 +15,19 @@
     </nav>
 </header>
 
-<style>
+<style lang="scss">
+    @import "src/lib/styles/sizes.scss";
     header {
-        padding: 1rem;
+        margin: 1rem;
 
         justify-content: center;
         display: flex;
         flex-wrap: wrap;
 
-        letter-spacing: 0.1rem;
         /*background: #17181C;*/
-        font-size: 1.25rem;
+        font-size: $menu-text-size;
+        letter-spacing: 0.1rem;
+        font-weight: 400;
     }
 
     ul {

@@ -1,9 +1,9 @@
 <!-- +layout.svelte -->
 <script lang=ts>
     import '$lib/styles/style.scss';
-    import { fade } from "svelte/transition";
     import { expoInOut } from "svelte/easing";
-  import Footer from '$lib/components/Footer.svelte';
+    import Header from '$lib/components/Header.svelte';
+    import Footer from '$lib/components/Footer.svelte';
     export let data;
     $: console.log(data);
     let is_home_page: Boolean = true;
@@ -26,19 +26,29 @@
     out:widen={{easing: expoInOut, duration: 1000, opposite: !is_home_page}}
     style="width: {is_home_page ? 50 : 100}%"
 >
-<div 
->
-    <slot />
-</div>
+
+    <div class="center-container">
+        <div class="container">
+
+            <Header/>
+            <main>
+                <slot />
+            </main>
+
+        </div>
+    </div>
+
+    <Footer/>
 </div>
 {/key}
 
 <style lang="scss"> 
 @import "src/lib/styles/colors.scss";
+    .center-container {
+        flex: 1;
+    }
     .anim {
         background-color: $background-color;
-    }
-    div {
         display: flex;
         flex-direction: column;
         min-height: 100vh;

@@ -1,7 +1,8 @@
 /* style.css */
 
 @import "$lib/styles/colors.scss";
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import "src/lib/styles/sizes.scss";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 body {
     margin: 0;
     padding: 0;
@@ -11,9 +12,23 @@ body {
 
     font-family: "Rubik";
     text-rendering: optimizeLegibility;
+    font-size: $normal-text-size;
+    letter-spacing: 0.05rem;
+    font-weight: 300;
 
+    overflow: hidden;
+}
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.container {
+    width: min(100vw, 700px);
+    display: flex;
+    flex-direction: column;
+}
 main {
     flex: 1;
     display: flex;
