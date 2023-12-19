@@ -11,9 +11,6 @@
 
 <style lang="scss">
 
-    :global(body) {
-        box-shadow: none;
-    }
     main {
         padding: 2rem;
     }

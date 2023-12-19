@@ -1,28 +1,17 @@
 /* style.css */
-@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+HK:wght@500&family=Rubik:wght@300&display=swap');
 
-@font-face {
-    font-family: 'linja-pona';
-    src: url("linja-pona-4.9.otf") format("opentype");
-}
-@font-face {
-    font-family: 'pincoyablack';
-    src: url("pincoyablack.otf") format("opentype");
-}
-@font-face {
-    font-family: 'pusab';
-    src: url("pusab.otf") format("opentype");
-}
+@import "$lib/styles/colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 body {
     margin: 0;
-    background: #17181C;
-    font-family: "helvetica";
+    padding: 0;
+
+    background: $background-color;
+    color: $text-color;
+
+    font-family: "Rubik";
     text-rendering: optimizeLegibility;
-    color: #eee;
-    padding: 0;    
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
 }
 
 main {
@@ -31,10 +20,9 @@ main {
     flex-direction: column;
 }
 
-
 a {
-    color: #F05D5E;
+    color: $accent-color;
 }
 a:hover {
-    color: #F3A712;
+    color: $accent-color-hover;
 }

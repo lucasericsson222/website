@@ -1,19 +1,15 @@
 <!-- Header.svelte -->
 <header>
-    <a href="/">HOME</a>
     <nav>
         <ul>
             <li>
-                <a href="/moodles">MOODLES</a>
+                <a href="/">home</a>
             </li>
             <li>
-                <a href="/blog">BLOG</a>
+                <a href="/blog">blog</a>
             </li>
             <li>
-                <a href="/blog/about">ABOUT</a>
-            </li>
-            <li>
-                <a href="/contact">CONTACT</a>
+                <a href="/blog/about">music</a>
             </li>
         </ul> 
     </nav>
@@ -22,20 +18,22 @@
 <style>
     header {
         padding: 1rem;
+
+        justify-content: center;
         display: flex;
         flex-wrap: wrap;
+
         letter-spacing: 0.1rem;
-        justify-content: space-between;
         /*background: #17181C;*/
-        font-size: 1.5rem;
-        color: #F05D5E;
+        font-size: 1.25rem;
     }
 
     ul {
         margin: 0;
         list-style-type: none;
         display: flex;
-        gap: 1rem;
+        padding: 0;
+        gap: 4rem;
     }
 
     a {

@@ -5,46 +5,23 @@
 
 <GameOfLife />
 
-<div class="center-container"> 
-    <h2 class="sideways-pre-text">HELLO! I'M</h2>
-    <h1 class="name">Lucas</h1>
-    <h2 class="post-text">A SOFTWARE DEVELOPER AND MUSICIAN</h2>
-</div>
+<p>Hello! I'm</p>
+<h1 class="name">Lucas Ericsson</h1>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+</p>
+<p>    
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
 
 <style lang="scss">
+    @import "src/lib/styles/colors.scss";
     h1 {
-        color: #F3A712;
-        font-size: 20rem;
-        font-family: 'pincoyablack';
-        text-shadow: -20px -20px #F05D5E;
-        margin: 0;
-        padding: 0;
+        background-color: $accent-color;
+        color: $background-color;
+        padding: 0.5rem;
+        display: inline-block;
     }
-    .center-container {
-        margin: 2rem;
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        justify-content: left;
-        //background-image: linear-gradient(rgba(23, 24, 28, 0.55),rgba(23, 24, 28, 0.55)), url("static.gif");
-    }
-    .sideways-pre-text {
-        transform: rotate(-10deg);
-        position: relative;
-        left: -20rem;
-    }
-    .post-text {
-        position: relative;
-        top: -5rem;
-    }
-    h2 {
-        background-color: #F05D5E;
-        color: #17181C;
-        padding: 0.25rem;
-    }
-    h1 {
-        margin: 0;
-    }
-
-
 </style>
