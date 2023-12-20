@@ -9,8 +9,8 @@
     let world: boolean[][] = [];
     let frame: number;
     const number = 10;
-    const dark_color = "rgba(39,41,50, 0.5)";
-    const light_color = "rgba(231, 236, 239, 0.85)";
+    const dark_color = "rgba(39,41,50, 1)";
+    const light_color = "rgba(231, 236, 239, 1)";
 
     onMount(
         () => {
