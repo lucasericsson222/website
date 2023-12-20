@@ -50,6 +50,7 @@
     let speed = 700;
 </script>
 
+<GameOfLife />
 <div class="transition-container">
 {#key is_home_page}
 <div
@@ -67,15 +68,13 @@
             <Header/>
             </div>
 
-            <GameOfLife />
             <div
                 in:fade={{easing: expoInOut, duration: speed / 3 * 2, delay: speed/2}}
                 out:fade={{easing: expoInOut, duration: speed / 3 * 2}}
             > 
-            <main
-            >
-                <slot />
-            </main>
+                <main>
+                    <slot />
+                </main>
             </div>
 
         </div>
