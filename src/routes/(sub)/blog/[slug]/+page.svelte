@@ -35,14 +35,4 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
-    .center-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .container {
-        width: min(100vw, 700px);
-        display: flex;
-        flex-direction: column;
-    }
 </style>

@@ -1,10 +1,4 @@
 <!-- +page.svelte -->
-<script lang="ts">
-    import GameOfLife from "$lib/components/GameOfLife.svelte";
-</script>
-
-<GameOfLife />
-
 <p>Hello! I'm</p>
 <h1 class="name">Lucas Ericsson</h1>
 <p>
