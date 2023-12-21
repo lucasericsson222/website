@@ -1,6 +1,6 @@
 // place files you want to import through the `$lib` alias in this folder.
 export const fetchMarkdownPosts = async () => {
-    const postFiles = import.meta.glob('/src/routes/\\(sub\\)/blog/posts/*.md');
+    const postFiles = import.meta.glob('/src/routes/\\(curry\\)/blog/posts/*.md');
     const iterPostFiles = Object.entries(postFiles);
     const posts = await Promise.all(
         iterPostFiles.map(async ([path, resolver]) => {

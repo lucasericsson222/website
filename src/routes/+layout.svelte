@@ -72,11 +72,8 @@
                 in:fade={{easing: expoInOut, duration: speed / 3 * 2, delay: speed/2}}
                 out:fade={{easing: expoInOut, duration: speed / 3 * 2}}
             > 
-                <main>
-                    <slot />
-                </main>
+                <slot/>
             </div>
-
         </div>
     </div>
 

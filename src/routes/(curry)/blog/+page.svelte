@@ -8,7 +8,7 @@
     {#each data.posts.entries() as [index, post]}
     <li>
 
-        <a class={index == 0 ? "less-top-margin title" : "equal-top-margin title"} href={post.path.replace("posts/", "").replace("\(sub\)/", "")}>
+        <a class={index == 0 ? "less-top-margin title" : "equal-top-margin title"} href={post.path.replace("posts/", "").replace("\(curry\)/", "")}>
             <h2>
                     {post.meta.title}
             </h2>

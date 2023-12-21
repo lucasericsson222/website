@@ -10,7 +10,7 @@
 <div>
 {#each data.imgpaths as src, i }
 <div class="overlap audio-player-container">
-    <p>{is_playing[i] ? "S" : "P"}</p>
+    <p>{is_playing[i] ? "■S" : "▶P"}</p>
     <div class="overlap hover-enlarge">
         <button on:click={(m)=>modify_is_playing(i)}></button>
         <img {src} alt="music img"/>
@@ -43,8 +43,6 @@
     grid-row: 1;
     grid-column: 1;
 }
-.audio-player-container {
-}
 .audio-player-container:hover > .hover-enlarge {
     transform: scale(125%);
 }
@@ -70,11 +68,7 @@ img {
     height: 10rem;
     padding: 1rem;
 }
-
 .hover-enlarge {
     transition: transform 0.5s;
-}
-
-.hover-enlarge:hover {
 }
 </style>
