@@ -9,7 +9,7 @@
                 <a href="/blog">blog</a>
             </li>
             <li>
-                <a href="/blog/about">music</a>
+                <a href="/music">music</a>
             </li>
         </ul> 
     </nav>

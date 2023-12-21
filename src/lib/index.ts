@@ -16,3 +16,18 @@ export const fetchMarkdownPosts = async () => {
 
     return posts;
 }
+
+export const fetchMusicImg = async () => {
+    const postFiles = import.meta.glob('/src/lib/assets/content/*.png');
+    const iterPostFiles = Object.entries(postFiles);
+    const posts = await Promise.all(
+        iterPostFiles.map(async ([path, resolver]) => {
+            return {
+                path: path ,
+                id: resolver
+            };
+        })
+    );
+
+    return posts;
+}
