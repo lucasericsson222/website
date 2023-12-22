@@ -1,16 +1,28 @@
 <script lang="ts">
+  import { onDestroy } from 'svelte';
+
     export let data;
-    let is_playing: boolean[] = [];
-    
+    let is_playing: number | null = null;
+    let audioplayer: HTMLAudioElement | null = null; 
     function modify_is_playing(i: number) {
-        is_playing[i] = !is_playing[i]; 
+        if (is_playing == i) {
+            is_playing = null;
+            audioplayer?.pause();
+        } else {
+            audioplayer?.pause();
+            is_playing = i;
+            audioplayer = new Audio(data.imgpaths[i].replace(".png", ".mp3"));
+            audioplayer.play();
+            audioplayer.onended = () => {is_playing = null};
+        }
     } 
+    onDestroy(() => {audioplayer?.pause(); audioplayer = null});
 </script>
 
 <div>
 {#each data.imgpaths as src, i }
 <div class="overlap audio-player-container">
-    <p>{is_playing[i] ? "■S" : "▶P"}</p>
+    <p>{is_playing == i ? "■S" : "▶P"}</p>
     <div class="overlap hover-enlarge">
         <button on:click={(m)=>modify_is_playing(i)}></button>
         <img {src} alt="music img"/>
@@ -48,7 +60,7 @@
 }
 
 button {
-    padding: 1rem;
+    margin: 1rem;
     border: none;
     background: inherit;
     cursor: pointer;
