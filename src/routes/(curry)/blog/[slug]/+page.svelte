@@ -8,7 +8,7 @@
         <div class="container">
 
             <h2 class="date">{data.title}</h2>
-            <h3>{(
+            <p>{(
                     new Intl.DateTimeFormat(
                         undefined, 
                         { 
@@ -19,7 +19,7 @@
                         }
                     )
                 ).format(new Date(data.date))}
-            </h3>
+            </p>
             <svelte:component this={data.content} />
         </div>
     </article>

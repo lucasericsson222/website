@@ -32,6 +32,9 @@
 </div>
 
 <style lang="scss">
+.audio-player-container {
+    padding: 1rem;
+}
 .audio-player-container p {
     z-index: 1;
     user-select: none;
@@ -78,7 +81,6 @@ div {
 img {
     width: 10rem;
     height: 10rem;
-    padding: 1rem;
 }
 .hover-enlarge {
     transition: transform 0.5s;

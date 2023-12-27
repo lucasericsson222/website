@@ -27,6 +27,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+.container > *  {
+    padding-left: 1rem;
+}
 main {
     flex: 1;
     display: flex;

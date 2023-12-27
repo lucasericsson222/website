@@ -13,7 +13,6 @@
                     {post.meta.title}
             </h2>
         </a>
-        <p>
         {(
             new Intl.DateTimeFormat(
                 undefined, 
@@ -25,7 +24,6 @@
                 }
             )
         ).format(new Date(post.meta.date))}
-        </p>
     </li>
     {#if index != data.posts.length - 1}
     <hr/>
